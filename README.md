@@ -1,121 +1,88 @@
-# Skin Disease Classification Using Machine Learning and Explainable AI
+# 🩺 Skin Disease Classification with Explainable AI
 
-## Overview
+This project uses machine learning and deep learning to classify skin diseases, and applies **Explainable AI (XAI)** techniques to make the model's predictions easier to understand and trust.
 
-This project focuses on skin disease classification using machine learning and deep learning techniques. It explores automated skin disease recognition and incorporates Explainable Artificial Intelligence (XAI) methods to improve model interpretability and transparency.
+---
 
-The project includes clinical evaluation, K-Fold cross-validation, and explainability analysis using LIME and SHAP.
+## 📁 Repository Contents
 
-## Project Objectives
+| File | Description |
+|------|-------------|
+| `Data.zip` | The skin disease image dataset used to train and evaluate the models (~169 MB, stored with Git LFS). |
+| `Skin Disease Classification_Clinical.ipynb` | Clinical evaluation of the classification model. |
+| `Skin Disease Classification_K fold.ipynb` | K-Fold cross-validation to check how well the model generalizes across different data splits. |
+| `Skin Disease Classification_Grad-CAM.ipynb` | Grad-CAM visualizations that highlight the regions of the skin image the model focuses on when making a prediction (stored with Git LFS). |
+| `Skin Disease Classification_Lime.ipynb` | LIME explanations for individual predictions. |
+| `Skin Disease Classification_SHAP.ipynb` | SHAP analysis showing how each feature contributes to the model's output. |
 
-- Develop an automated approach for skin disease classification.
-- Evaluate classification performance using clinical evaluation techniques.
-- Apply K-Fold Cross-Validation to assess model generalization.
-- Interpret model predictions using LIME.
-- Analyze feature importance and model behaviour using SHAP.
-- Explore the potential of explainable AI in healthcare applications.
+---
 
-## Repository Structure
-
-```text
-Skin-disease-classification/
-│
-├── Skin Disease Classification_Clinical.ipynb
-├── Skin Disease Classification_K fold.ipynb
-├── Skin Disease Classification_Lime.ipynb
-├── Skin Disease Classification_SHAP.ipynb
-│
-└── README.md
-```
-
-## Notebooks Description
-
-### 1. Clinical Evaluation
-`Skin Disease Classification_Clinical.ipynb`
-
-Contains the clinical evaluation and analysis of the skin disease classification approach.
-
-### 2. K-Fold Cross-Validation
-`Skin Disease Classification_K fold.ipynb`
-
-Explores K-Fold Cross-Validation to evaluate model performance across multiple data splits and assess generalization.
-
-### 3. LIME Explainability
-`Skin Disease Classification_Lime.ipynb`
-
-Uses Local Interpretable Model-Agnostic Explanations (LIME) to interpret individual model predictions.
-
-### 4. SHAP Explainability
-`Skin Disease Classification_SHAP.ipynb`
-
-Uses SHapley Additive exPlanations (SHAP) to understand feature contributions and model behaviour.
-
-## Technologies Used
+## 🛠️ Technologies Used
 
 - Python
 - Jupyter Notebook
-- Machine Learning / Deep Learning
-- K-Fold Cross-Validation
+- TensorFlow / Keras
+- Grad-CAM
 - LIME
 - SHAP
-- Explainable Artificial Intelligence (XAI)
 
-## Installation and Setup
+---
 
-1. Clone the repository:
+## 📦 Dataset and Git LFS
+
+`Data.zip` and `Skin Disease Classification_Grad-CAM.ipynb` are large files, so they are stored using **Git Large File Storage (Git LFS)**.
+
+You need Git LFS installed to download the actual files. Without it, you will only get small pointer files instead of the real data.
+
+---
+
+## 🚀 Getting Started
+
+### 1. Install Git LFS
+
+Download and install it from [git-lfs.com](https://git-lfs.com). It is already included with Git for Windows.
+
+Then run this once:
+
+```bash
+git lfs install
+```
+
+### 2. Clone the repository
 
 ```bash
 git clone https://github.com/Zeeshan467/Skin-disease-classification.git
-```
-
-2. Navigate to the project directory:
-
-```bash
 cd Skin-disease-classification
 ```
 
-3. Install Jupyter Notebook:
+> If you already cloned the repo before installing Git LFS, run `git lfs pull` inside the folder to download the full files.
+
+### 3. Extract the dataset
+
+Unzip `Data.zip` inside the project folder.
+
+### 4. Install the required libraries
 
 ```bash
-pip install notebook
+pip install jupyter tensorflow numpy pandas matplotlib scikit-learn opencv-python lime shap
 ```
 
-4. Install the relevant Python libraries used in the notebooks.
-
-5. Launch Jupyter Notebook:
+### 5. Run the notebooks
 
 ```bash
 jupyter notebook
 ```
 
-6. Open the required notebook and execute the cells.
+Open any notebook and run the cells from top to bottom.
 
-## Explainable Artificial Intelligence
+---
 
-This project incorporates two explainability techniques:
+## ⚠️ Disclaimer
 
-- **LIME:** Explains individual predictions by approximating the model locally.
-- **SHAP:** Quantifies the contribution of input features to model predictions.
+This project is for **educational and research purposes only**. It is not a medical diagnosis tool and should not be used in place of advice from a qualified dermatologist or healthcare professional.
 
-These techniques help investigate how the classification model generates its predictions.
+---
 
-## Applications
+## 👤 Author
 
-- Computer-aided skin disease classification research.
-- Explainable AI in healthcare.
-- Medical image classification research.
-- Evaluation of machine learning models in clinical applications.
-
-## Disclaimer
-
-This project is intended for educational and research purposes only. It is not a substitute for professional medical diagnosis, clinical examination, or advice from qualified healthcare professionals.
-
-## Author
-
-**Zeeshan**
-
-GitHub: [@Zeeshan467](https://github.com/Zeeshan467)
-
-## Acknowledgements
-
-This project explores the application of machine learning and Explainable AI techniques to healthcare-related classification problems.
+**Zeeshan** – [GitHub](https://github.com/Zeeshan467)
